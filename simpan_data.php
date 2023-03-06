@@ -18,7 +18,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') 
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
-        echo "<script>alert('Data sudah ada di database.'); window.location.href='index.php';</script>";
+        echo "<script>alert('Data sudah ada di database.'); window.location.href='index.html';</script>";
         
       } else {
 
@@ -37,9 +37,9 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') 
         VALUES ('$nis','$nama','$jeniskelamin','$mapel1','$nilai1','$mapel2','$nilai2','$mapel3','$nilai3','$mapel4','$nilai4')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "<script>alert('Data berhasil disimpan.');window.location.href='index.php';</script>";
+        echo "<script>alert('Data berhasil disimpan.');window.location.href='index.html';</script>";
     } else {
-        echo "<script>alert('Data gagal disimpan.');window.location.href='index.php';</script>" . mysqli_error($conn);
+        echo "<script>alert('Data gagal disimpan.');window.location.href='index.html';</script>" . mysqli_error($conn);
     }
 }
 
